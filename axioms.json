@@ -62,49 +62,61 @@
     "value": "=",
     "left": {
       "type": "element",
-      "value": "0",
-      "left": null,
-      "right": null
+      "value": "0"
     },
     "right": {
       "type": "expression",
       "value": "+",
       "left": {
         "type": "element",
-        "value": "0",
-        "left": null,
-        "right": null
+        "value": "0"
       },
       "right": {
         "type": "element",
-        "value": "0",
-        "left": null,
-        "right": null
+        "value": "0"
       }
     }
   },
   {
     "id": "A2",
-    "type": "element",
-    "value": "Socrates is a man",
-    "left": null,
-    "right": null
+    "type": "proposition",
+    "value": "is a",
+    "left": {
+      "type": "element",
+      "value": "Socrates"
+    },
+    "right": {
+      "type": "element",
+      "value": "man"
+    }
   },
   {
     "id": "A3",
     "type": "proposition",
     "value": "=>",
     "left": {
-      "type": "element",
-      "value": "Socrates is a man",
-      "left": null,
-      "right": null
+      "type": "proposition",
+      "value": "is a",
+      "left": {
+        "type": "variable",
+        "value": "v1"
+      },
+      "right": {
+        "type": "element",
+        "value": "man"
+      }
     },
     "right": {
-      "type": "element",
-      "value": "Socrates is mortal",
-      "left": null,
-      "right": null
+      "type": "proposition",
+      "value": "is a",
+      "left": {
+        "type": "variable",
+        "value": "v2"
+      },
+      "right": {
+        "type": "element",
+        "value": "mortal"
+      }
     }
   }
 ]

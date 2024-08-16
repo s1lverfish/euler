@@ -16,5 +16,8 @@ export type Judgement = {
 
 export type Arg = {
   scheme: string;
-  inTrees: string[];
+  inTrees: {
+    goalTree: any;
+    checkId: string;
+  }[];
 };
