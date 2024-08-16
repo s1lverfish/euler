@@ -1,0 +1,37 @@
+[
+  {
+    "id": "ifthen",
+    "inTree": {
+      "type": "proposition",
+      "value": "^",
+      "left": {
+        "type": "proposition",
+        "value": "=>",
+        "left": {
+          "type": "variable",
+          "value": "A",
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "type": "variable",
+          "value": "B",
+          "left": null,
+          "right": null
+        }
+      },
+      "right": {
+        "type": "variable",
+        "value": "A",
+        "left": null,
+        "right": null
+      }
+    },
+    "outTree": {
+      "type": "variable",
+      "value": "B",
+      "left": null,
+      "right": null
+    }
+  }
+]

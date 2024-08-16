@@ -1,0 +1,110 @@
+[
+  {
+    "id": "A0",
+    "type": "proposition",
+    "value": "=>",
+    "left": {
+      "type": "proposition",
+      "value": "=",
+      "left": {
+        "type": "element",
+        "value": "0",
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "expression",
+        "value": "+",
+        "left": {
+          "type": "element",
+          "value": "0",
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "type": "element",
+          "value": "0",
+          "left": null,
+          "right": null
+        }
+      }
+    },
+    "right": {
+      "type": "proposition",
+      "value": "=",
+      "right": {
+        "type": "element",
+        "value": "0",
+        "left": null,
+        "right": null
+      },
+      "left": {
+        "type": "expression",
+        "value": "+",
+        "left": {
+          "type": "element",
+          "value": "0",
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "type": "element",
+          "value": "0",
+          "left": null,
+          "right": null
+        }
+      }
+    }
+  },
+  {
+    "id": "A1",
+    "type": "proposition",
+    "value": "=",
+    "left": {
+      "type": "element",
+      "value": "0",
+      "left": null,
+      "right": null
+    },
+    "right": {
+      "type": "expression",
+      "value": "+",
+      "left": {
+        "type": "element",
+        "value": "0",
+        "left": null,
+        "right": null
+      },
+      "right": {
+        "type": "element",
+        "value": "0",
+        "left": null,
+        "right": null
+      }
+    }
+  },
+  {
+    "id": "A2",
+    "type": "element",
+    "value": "Socrates is a man",
+    "left": null,
+    "right": null
+  },
+  {
+    "id": "A3",
+    "type": "proposition",
+    "value": "=>",
+    "left": {
+      "type": "element",
+      "value": "Socrates is a man",
+      "left": null,
+      "right": null
+    },
+    "right": {
+      "type": "element",
+      "value": "Socrates is mortal",
+      "left": null,
+      "right": null
+    }
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "arg1": {
+    "scheme": "ifthen",
+    "inTrees": ["A0", "A1"]
+  },
+  "arg2": {
+    "scheme": "ifthen",
+    "inTrees": ["A3", "A2"]
+  }
+}
