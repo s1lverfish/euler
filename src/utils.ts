@@ -4,23 +4,24 @@ import * as fs from "fs";
 import * as path from "path";
 
 const isTreeNode = (obj: any) => {
-  return (
-    Object.hasOwn(obj, "type") &&
-    Object.hasOwn(obj, "left") &&
-    Object.hasOwn(obj, "right") &&
-    Object.hasOwn(obj, "value")
-  );
+  return Object.hasOwn(obj, "type") && Object.hasOwn(obj, "value");
 };
 
 export const parseTree = (root: any): TreeNode => {
   if (!isTreeNode(root)) {
     throw new Error(
-      `error parsing node: id: (${root?.id ?? "NO_ID"})  type: (${root?.type ?? "NO_TYPE"}) left: (${root?.left ?? "NO_LEFT"}) right: (${root?.right ?? "NO_RIGHT"}) value: (${root?.value ?? "NO_VALUE"})`,
+      `error parsing node: id: (${root?.id ?? "NO_ID"})  type: (${root?.type ?? "NO_TYPE"}) value: (${root?.value ?? "NO_VALUE"})`,
     );
   }
   const rootNode = new TreeNode(root.type, root.value, root?.id);
-  rootNode.left = root.left === null ? null : parseTree(root.left);
-  rootNode.right = root.right === null ? null : parseTree(root.right);
+  rootNode.left =
+    root?.left === undefined || root?.left === null
+      ? null
+      : parseTree(root.left);
+  rootNode.right =
+    root?.right === undefined || root?.right === null
+      ? null
+      : parseTree(root.right);
   return rootNode;
 };
 
@@ -61,6 +62,7 @@ export const getJudgementObject = (id: string) => {
   throw new Error(`judgement of id ${id} not found`);
 };
 
+//t1-re ráfektetjük a t2-őt
 export const weakMatch = (
   mp: Map<string, TreeNode>,
   t1: TreeNode | null,

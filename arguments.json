@@ -5,6 +5,53 @@
   },
   "arg2": {
     "scheme": "ifthen",
-    "inTrees": ["A3", "A2"]
+    "inTrees": [
+      {
+        "goalTree": {
+          "type": "proposition",
+          "value": "=>",
+          "left": {
+            "type": "proposition",
+            "value": "is a",
+            "left": {
+              "type": "element",
+              "value": "Socrates"
+            },
+            "right": {
+              "type": "element",
+              "value": "man"
+            }
+          },
+          "right": {
+            "type": "proposition",
+            "value": "is a",
+            "left": {
+              "type": "element",
+              "value": "Euler"
+            },
+            "right": {
+              "type": "element",
+              "value": "mortal"
+            }
+          }
+        },
+        "checkId": "A3"
+      },
+      {
+        "goalTree": {
+          "type": "proposition",
+          "value": "is a",
+          "left": {
+            "type": "element",
+            "value": "Socrates"
+          },
+          "right": {
+            "type": "element",
+            "value": "man"
+          }
+        },
+        "checkId": "A2"
+      }
+    ]
   }
 }
