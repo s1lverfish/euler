@@ -19,3 +19,24 @@ export class TreeNode {
     return `(${this.left?.toString() ?? ""} ${this.value} ${this.right?.toString() ?? ""})`;
   }
 }
+
+export const defaultLogSymbols = ["!", "^", "v", "=>", "<=>"];
+export const defaultSymbols = [
+  "In",
+  "=",
+  "<",
+  "<=",
+  "+",
+  "#",
+  "*",
+  ".",
+  ":",
+  "/",
+  "-",
+  "^-1",
+  "Uni",
+  "Int",
+  "Dif",
+  "Sub",
+  "Suq",
+];

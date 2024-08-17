@@ -6,9 +6,12 @@ import {
   chainPremises,
   weakMatch,
   generateConclusion,
+  writeJson,
 } from "./utils.js";
 import { TreeNode } from "./TreeNode.js";
 import type { Arg } from "./types";
+import * as fs from "fs";
+import * as path from "path";
 
 const runArg = (argId: string) => {
   console.log(`Preparing to run ${argId} ...`);
@@ -57,17 +60,49 @@ const runArg = (argId: string) => {
 
   const premises = notYetPremises.map((premiseData) => premiseData.goalTree);
 
-  const unifiedPremise = new TreeNode("proposition", "^");
+  const unifiedPremise = new TreeNode("logSymbol", "^");
   chainPremises(unifiedPremise, premises[0], premises.slice(1)); //this is probably
 
   const mp = new Map<string, TreeNode>();
   if (weakMatch(mp, inTree, unifiedPremise)) {
     console.log("match!!!!");
+    const conclusion = generateConclusion(mp, outTree);
+
+    if (!conclusion) {
+      throw new Error("conclusion is null");
+    }
+
+    const conclusions = readJson("../conclusions.json") as any[];
+
+    if (conclusions.length === 0) {
+      conclusion.id = "C0";
+    } else {
+      conclusion.id = `C${parseInt((conclusions.at(-1).id as string).slice(1), 10) + 1}`;
+    }
+    conclusions.push(conclusion);
+    writeJson("../conclusions.json", JSON.stringify(conclusions));
+    fs.appendFileSync(
+      path.join(import.meta.dirname, "../conclusionsHumanReadable"),
+      conclusions.at(-1).id + "\n",
+    );
+    fs.appendFileSync(
+      path.join(import.meta.dirname, "../conclusionsHumanReadable"),
+      "Scheme: " + inTree.toString() + "\n",
+    );
+    premises.forEach((el, idx) =>
+      fs.appendFileSync(
+        path.join(import.meta.dirname, "../conclusionsHumanReadable"),
+        idx.toString() + ": " + el.toString() + "\n",
+      ),
+    );
+    fs.appendFileSync(
+      path.join(import.meta.dirname, "../conclusionsHumanReadable"),
+      "C: " + conclusion.toString() + "\n\n",
+    );
+
     console.log(inTree.toString());
     premises.forEach((el) => console.log(el.toString()));
-    const conclusion = generateConclusion(mp, outTree);
-    console.log("conclusion: ", conclusion?.toString());
-    // console.log(conclusion);
+    console.log(conclusion.toString());
   } else {
     console.log("scheme inTree does not match unifiedPremise");
   }

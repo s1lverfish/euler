@@ -26,11 +26,14 @@ export const chainPremises = (parent, left, rest) => {
         return;
     }
     parent.left = left;
-    parent.right = new TreeNode("proposition", "^");
+    parent.right = new TreeNode("logSymbol", "^");
     chainPremises(parent.right, rest[0], rest.slice(1));
 };
 export const readJson = (relPath) => {
     return JSON.parse(fs.readFileSync(path.join(import.meta.dirname, relPath)).toString());
+};
+export const writeJson = (relPath, data) => {
+    fs.writeFileSync(path.join(import.meta.dirname, relPath), data);
 };
 export const getSchemeObject = (scheme) => {
     const schemeJson = readJson("../schemes.json");

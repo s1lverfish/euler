@@ -1,0 +1,55 @@
+
+C0
+In tree: ((A => B) ^ A)
+0: ((Socrates is a man) => (Euler is a mortal))
+1: (Socrates is a man)
+C: (Euler is a mortal)
+
+C1
+In tree: ((A => B) ^ A)
+0: ((Socrates is a man) => (Euler is a mortal))
+1: (Socrates is a man)
+C: (Euler is a mortal)
+
+C2
+In tree: ((A => B) ^ A)
+0: ((Socrates is a man) => (Euler is a mortal))
+1: (Socrates is a man)
+C: (Euler is a mortal)
+
+C3
+In tree: ((A => B) ^ A)
+0: ((Socrates is a man) => (Euler is a mortal))
+1: (Socrates is a man)
+C: (Euler is a mortal)
+
+C4
+Scheme: ((A => B) ^ A)
+0: ((Socrates is a man) => (Euler is a mortal))
+1: (Socrates is a man)
+C: (Euler is a mortal)
+
+C5
+Scheme: ((A => B) ^ A)
+0: ((Socrates is a man) => (Euler is a mortal))
+1: (Socrates is a man)
+C: (Euler is a mortal)
+
+C6
+Scheme: ((A => B) ^ A)
+0: ((Socrates is a man) => (Euler is a mortal))
+1: (Socrates is a man)
+C: (Euler is a mortal)
+
+C7
+Scheme: ((A => B) ^ A)
+0: ((Socrates is a man) => (Euler is a mortal))
+1: (Socrates is a man)
+C: (Euler is a mortal)
+
+C8
+Scheme: ((A => B) ^ A)
+0: ((Socrates is a man) => (Euler is a mortal))
+1: (Socrates is a man)
+C: (Euler is a mortal)
+

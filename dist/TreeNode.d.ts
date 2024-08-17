@@ -8,3 +8,5 @@ export declare class TreeNode {
     constructor(type: NodeType, value: string, id?: string | undefined);
     toString(): string;
 }
+export declare const defaultLogSymbols: string[];
+export declare const defaultSymbols: string[];

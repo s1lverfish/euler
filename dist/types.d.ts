@@ -1,4 +1,4 @@
-export type NodeType = "element" | "expression" | "proposition" | "variable";
+export type NodeType = "element" | "symbol" | "logSymbol" | "variable";
 export type Scheme = {
     id: string;
     inTree: any;
